@@ -20,5 +20,3 @@ RUN echo "source /opt/ros/jazzy/setup.bash" > ~/.bashrc
 RUN sudo apt install ros-jazzy-cv-bridge ros-jazzy-image-transport ros-jazzy-image-transport-plugins -y
 
 RUN mkdir -p ros_workspace/src
-
-RUN rosdep update
