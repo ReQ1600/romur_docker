@@ -2,4 +2,4 @@
 
 xhost +local:root
 
-docker start romur -i bash
+docker start romur -i
