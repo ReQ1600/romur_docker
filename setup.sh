@@ -7,7 +7,7 @@ git clone git@github.com:ReQ1600/romur_driver_communication.git mt/romur_driver_
 git clone git@github.com:ReQ1600/romur_camera_publisher.git mt/romur_camera_publisher
 
 # gives permissions to mt to docker user
-sudo chown -R 69:69 "$(pwd)"/mt
+sudo chmod 777 mt
 
 xhost +local:root && docker run -it \
     --env="DISPLAY" \
