@@ -3,8 +3,8 @@
 docker build -t romur:latest .
 
 mkdir mt -p
-git clone git@github.com:ReQ1600/romur_driver_communication.git mt/romur_driver_communication
-git clone git@github.com:ReQ1600/romur_camera_publisher.git mt/romur_camera_publisher
+git clone https://github.com/ReQ1600/romur_driver_communication.git mt/romur_driver_communication
+git clone https://github.com/ReQ1600/romur_camera_publisher.git mt/romur_camera_publisher
 
 # gives permissions to mt to docker user
 sudo chmod 777 mt
