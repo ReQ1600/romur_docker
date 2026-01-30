@@ -11,3 +11,8 @@ To start stopped container run:
 ```
 ./start_container.sh
 ```
+
+New shells should be attached with:
+```
+docker exec -it romur bash
+```

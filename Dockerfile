@@ -15,8 +15,12 @@ USER $USERNAME
 
 WORKDIR /home/$USERNAME
 
-RUN echo "source /opt/ros/jazzy/setup.bash" > ~/.bashrc
+RUN echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
 
-RUN sudo apt install ros-jazzy-cv-bridge ros-jazzy-image-transport ros-jazzy-image-transport-plugins -y
+RUN apt update &&  apt install libopencv-dev ros-jazzy-cv-bridge ros-jazzy-image-transport ros-jazzy-image-transport-plugins -y
+RUN apt install v4l-utils -y
 
-RUN mkdir -p ros_workspace/src
+RUN mkdir -p ros_workspace/src && cd ros_workspace && colcon build
+RUN echo "source /home/user/ros_workspace/install/setup.bash" >> ~/.bashrc
+
+ENV ROS_DOMAIN_ID=65
